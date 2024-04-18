@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="12"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <Title Value="pOrcarmentoFinal"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <BuildModes>
+      <Item Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <RunParams>
+      <FormatVersion Value="2"/>
+    </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
+        <PackageName Value="zcomponent"/>
+      </Item>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+      <Item>
+        <PackageName Value="LCL"/>
+      </Item>
+    </RequiredPackages>
+    <Units>
+      <Unit>
+        <Filename Value="pOrcarmentoFinal.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Modelo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMod"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umenup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenuP"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenuP"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadProd"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucategoriaprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCatProd"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCategoriaProd"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucateproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCategoriaProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCateProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCadUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadUsuario"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucatescolha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCatEscolha"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCatEscolha"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FcadOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadOrcamento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="upesqcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FpesqCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPesqCliente"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uaddorcitem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPesqProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAddOrcItem"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uprocurarproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProcProd"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uProcurarProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatorioclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrelClientes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelatorioClientes"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrelProd"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelProduto"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRelOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelOrcamento"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRelUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelUsuario"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fsobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSobre"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Flogin"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLogin"/>
+      </Unit>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="pOrcarmentoFinal"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf3"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions>
+      <Item>
+        <Name Value="EAbort"/>
+      </Item>
+      <Item>
+        <Name Value="ECodetoolError"/>
+      </Item>
+      <Item>
+        <Name Value="EFOpenError"/>
+      </Item>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

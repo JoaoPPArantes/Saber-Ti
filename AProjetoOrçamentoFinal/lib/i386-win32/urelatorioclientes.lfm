@@ -1,0 +1,97 @@
+object FrelClientes: TFrelClientes
+  Left = 544
+  Height = 354
+  Top = 198
+  Width = 446
+  Caption = 'Relatório de Clientes'
+  ClientHeight = 354
+  ClientWidth = 446
+  Color = clGradientActiveCaption
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '3.2.0.0'
+  object btnRel: TButton
+    Left = 40
+    Height = 111
+    Top = 104
+    Width = 376
+    Caption = 'Imprimir Relatório'
+    Font.Height = -33
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnRelClick
+  end
+  object btnFecharRel: TButton
+    Left = 304
+    Height = 31
+    Top = 296
+    Width = 94
+    Caption = 'Fechar'
+    TabOrder = 1
+    OnClick = btnFecharRelClick
+  end
+  object frReportClientes: TfrReport
+    Dataset = frDbDsClientes
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 88
+    Top = 32
+  end
+  object frDbDsClientes: TfrDBDataSet
+    DataSet = zqRelClientes
+    OnCheckEOF = frDbDsClientesCheckEOF
+    Left = 192
+    Top = 32
+  end
+  object zqRelClientes: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from cliente'
+    )
+    Params = <>
+    Left = 280
+    Top = 32
+    object zqRelClientesclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqRelClientestipo_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object zqRelClientescpf_cnpj_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object zqRelClientesnome_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+end

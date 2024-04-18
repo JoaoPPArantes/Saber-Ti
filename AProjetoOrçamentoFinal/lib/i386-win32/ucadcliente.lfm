@@ -1,0 +1,277 @@
+inherited FCadCliente: TFCadCliente
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Cadastro De Cliente'
+  ClientHeight = 1001
+  ClientWidth = 1920
+  Color = clGradientActiveCaption
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1001
+    Width = 1920
+    inherited TbsPesq: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PModTop: TPanel
+        Width = 1912
+        ClientWidth = 1912
+        ParentBackground = False
+        inherited CodigoMod: TLabel
+          Height = 20
+          Width = 52
+        end
+        inherited EdCodP: TEdit
+          Height = 28
+        end
+        inherited BtPesqMod: TBitBtn
+          Left = 224
+          Height = 29
+          Top = 38
+          Width = 24
+          Align = alCustom
+          Caption = ''
+          Glyph.Data = {
+            DE020000424DDE02000000000000B60000002800000016000000170000000100
+            08000000000028020000C30E0000C30E0000200000000000000000FF0000FFFF
+            FF0080808000C0C0C00000000000FF000000FFFF00000000FF0000FFFF0045CA
+            BF004B737F00D0B4B400CC625700FF31310000CEFF000079FF000029FF005E5E
+            FF00BDBDFF00502B2D0000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000010101010101
+            0101010101010101010101010101010100000103030303030303030303030303
+            0303030404040301000001030303030303030303030303030303040701070401
+            0000010303030303030303030303030303040701010704010000010303030303
+            0303030303030303040701010707040100000103030303030303030303030304
+            0701010707040301000001030303030303030303030304070101070704030301
+            0000010303030303030303030304070101070704030303010000010303030303
+            0303030304070101070704030303030100000103030303030303030404040307
+            0704030303030301000001030303030304040404040404070403030303030301
+            0000010303030404060106010104040403030303030303010000010303040106
+            0106010101010403030303030303030100000103030406010601060106010403
+            0303030303030301000001030406010601010106010601040303030303030301
+            0000010304010601060106010601010403030303030303010000010304060106
+            0106010601060104030303030303030100000103040106010601060106010104
+            0303030303030301000001030304010601010106010604030303030303030301
+            0000010303040601060106010601040303030303030303010000010303030404
+            0101010604040303030303030303030100000103030303030404040403030303
+            0303030303030301000001010101010101010101010101010101010101010101
+            0000
+          }
+          OnClick = BtPesqModClick
+        end
+      end
+      inherited PModBot: TPanel
+        Top = 866
+        Width = 1912
+        ClientWidth = 1912
+        ParentBackground = False
+        inherited BtnNovoMod: TBitBtn
+          OnClick = BtnNovoModClick
+        end
+        inherited BtnFechar: TBitBtn
+          Left = 1779
+          OnClick = BtnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 774
+        Top = 92
+        Width = 1912
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'ID'
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Nome'
+            Width = 300
+            FieldName = 'nome_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'CPF/CNPJ'
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Tipo'
+            FieldName = 'tipo_cliente'
+          end>
+        ReadOnly = True
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited TBSCad: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PtbsCad: TPanel
+        Top = 856
+        Width = 1912
+        BevelColor = clGradientActiveCaption
+        ClientWidth = 1912
+        ParentBackground = False
+        ParentFont = False
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 1779
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel1: TPanel[1]
+        Left = 0
+        Height = 208
+        Top = 8
+        Width = 272
+        ClientHeight = 208
+        ClientWidth = 272
+        Color = clInactiveBorder
+        ParentBackground = False
+        ParentColor = False
+        TabOrder = 1
+        OnClick = Panel1Click
+        OnResize = Panel1Resize
+        object Label1: TLabel
+          Left = 88
+          Height = 20
+          Top = 56
+          Width = 18
+          Caption = 'ID:'
+        end
+        object dbID: TDBEdit
+          Left = 117
+          Height = 28
+          Top = 55
+          Width = 42
+          DataField = 'clienteid'
+          DataSource = DataSource1
+          Alignment = taRightJustify
+          AutoSelect = False
+          AutoSize = False
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object Label4: TLabel
+          Left = 172
+          Height = 20
+          Top = 58
+          Width = 33
+          Caption = 'Tipo:'
+        end
+        object dbcTipo: TDBComboBox
+          Left = 213
+          Height = 28
+          Top = 56
+          Width = 32
+          DataField = 'tipo_cliente'
+          DataSource = DataSource1
+          ItemHeight = 20
+          Items.Strings = (
+            'F'
+            'J'
+          )
+          MaxLength = 0
+          TabOrder = 1
+        end
+        object Label2: TLabel
+          Left = 62
+          Height = 20
+          Top = 94
+          Width = 44
+          Caption = 'Nome:'
+        end
+        object dbNome: TDBEdit
+          Left = 117
+          Height = 28
+          Top = 93
+          Width = 128
+          DataField = 'nome_cliente'
+          DataSource = DataSource1
+          MaxLength = 100
+          TabOrder = 2
+        end
+        object Label3: TLabel
+          Left = 41
+          Height = 20
+          Top = 137
+          Width = 65
+          Caption = 'CPF/CNPJ:'
+        end
+        object dbCpf: TDBEdit
+          Left = 117
+          Height = 28
+          Top = 133
+          Width = 128
+          DataField = 'cpf_cnpj_cliente'
+          DataSource = DataSource1
+          MaxLength = 18
+          TabOrder = 3
+        end
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = zqCadCliente
+  end
+  object zqCadCliente: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    OnNewRecord = zqCadClienteNewRecord
+    SQL.Strings = (
+      'select * from cliente'
+    )
+    Params = <>
+    Left = 488
+    Top = 56
+    object zqCadClienteclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCadClientetipo_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_cliente'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object zqCadClientecpf_cnpj_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'cpf_cnpj_cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 18
+    end
+    object zqCadClientenome_cliente: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_cliente'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 100
+    end
+  end
+end

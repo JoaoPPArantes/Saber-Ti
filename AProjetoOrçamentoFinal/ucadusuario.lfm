@@ -1,0 +1,311 @@
+inherited fCadUsuario: TfCadUsuario
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Cadastro De Usúarios'
+  ClientHeight = 1001
+  ClientWidth = 1920
+  OnClose = FormClose
+  OnResize = FormResize
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1001
+    Width = 1920
+    inherited TbsPesq: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PModTop: TPanel
+        Width = 1912
+        BevelColor = clGradientActiveCaption
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited CodigoMod: TLabel
+          Height = 20
+          Width = 52
+        end
+        inherited EdCodP: TEdit
+          Height = 28
+        end
+        inherited BtPesqMod: TBitBtn
+          Left = 216
+          Height = 26
+          Top = 40
+          Width = 30
+          Align = alCustom
+          Caption = ''
+          Glyph.Data = {
+            DE020000424DDE02000000000000B60000002800000016000000170000000100
+            08000000000028020000C30E0000C30E0000200000000000000000FF0000FFFF
+            FF0080808000C0C0C00000000000FF000000FFFF00000000FF0000FFFF0045CA
+            BF004B737F00D0B4B400CC625700FF31310000CEFF000079FF000029FF005E5E
+            FF00BDBDFF00502B2D0000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000010101010101
+            0101010101010101010101010101010100000103030303030303030303030303
+            0303030404040301000001030303030303030303030303030303040701070401
+            0000010303030303030303030303030303040701010704010000010303030303
+            0303030303030303040701010707040100000103030303030303030303030304
+            0701010707040301000001030303030303030303030304070101070704030301
+            0000010303030303030303030304070101070704030303010000010303030303
+            0303030304070101070704030303030100000103030303030303030404040307
+            0704030303030301000001030303030304040404040404070403030303030301
+            0000010303030404060106010104040403030303030303010000010303040106
+            0106010101010403030303030303030100000103030406010601060106010403
+            0303030303030301000001030406010601010106010601040303030303030301
+            0000010304010601060106010601010403030303030303010000010304060106
+            0106010601060104030303030303030100000103040106010601060106010104
+            0303030303030301000001030304010601010106010604030303030303030301
+            0000010303040601060106010601040303030303030303010000010303030404
+            0101010604040303030303030303030100000103030303030404040403030303
+            0303030303030301000001010101010101010101010101010101010101010101
+            0000
+          }
+          OnClick = BtPesqModClick
+        end
+      end
+      inherited PModBot: TPanel
+        Top = 866
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited BtnNovoMod: TBitBtn
+          OnClick = BtnNovoModClick
+        end
+        inherited BtnFechar: TBitBtn
+          Left = 1779
+          OnClick = BtnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 774
+        Top = 92
+        Width = 1912
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'ID'
+            FieldName = 'id'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Acesso'
+            Width = 100
+            FieldName = 'tipo_acesso'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Usúario'
+            Width = 150
+            FieldName = 'usuario'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Nome Completo'
+            Width = 250
+            FieldName = 'nome_completo'
+          end        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'Senha'
+            Width = 100
+            FieldName = 'senha'
+          end>
+        ReadOnly = True
+      end
+    end
+    inherited TBSCad: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PtbsCad: TPanel
+        Top = 856
+        Width = 1912
+        ClientWidth = 1912
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 1779
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel1: TPanel[1]
+        Left = 8
+        Height = 328
+        Top = 0
+        Width = 536
+        ClientHeight = 328
+        ClientWidth = 536
+        TabOrder = 1
+        OnClick = Panel1Click
+        OnResize = Panel1Resize
+        object Label4: TLabel
+          Left = 37
+          Height = 20
+          Top = 88
+          Width = 114
+          Caption = 'Nome Completo:'
+        end
+        object dbNome: TDBEdit
+          Left = 157
+          Height = 28
+          Top = 86
+          Width = 248
+          DataField = 'nome_completo'
+          DataSource = DataSource1
+          MaxLength = 60
+          TabOrder = 0
+        end
+        object dbUsuario: TDBEdit
+          Left = 157
+          Height = 28
+          Top = 129
+          Width = 96
+          DataField = 'usuario'
+          DataSource = DataSource1
+          MaxLength = 30
+          TabOrder = 1
+        end
+        object Label3: TLabel
+          Left = 98
+          Height = 20
+          Top = 133
+          Width = 53
+          Caption = 'Usúario:'
+        end
+        object Label5: TLabel
+          Left = 108
+          Height = 20
+          Top = 174
+          Width = 43
+          Caption = 'Senha:'
+        end
+        object dbSenha: TDBEdit
+          Left = 157
+          Height = 28
+          Top = 169
+          Width = 96
+          DataField = 'senha'
+          DataSource = DataSource1
+          MaxLength = 50
+          TabOrder = 2
+        end
+        object Label2: TLabel
+          Left = 82
+          Height = 20
+          Top = 211
+          Width = 69
+          Caption = 'Permissão:'
+        end
+        object dbPermissao: TDBComboBox
+          Left = 157
+          Height = 28
+          Top = 209
+          Width = 96
+          CharCase = ecUppercase
+          DataField = 'tipo_acesso'
+          DataSource = DataSource1
+          ItemHeight = 20
+          Items.Strings = (
+            'ADMIN'
+            'USUÁRIO'
+          )
+          MaxLength = 0
+          OnChange = dbPermissaoChange
+          TabOrder = 3
+        end
+        object dbID: TDBEdit
+          Left = 304
+          Height = 28
+          Top = 129
+          Width = 32
+          DataField = 'id'
+          DataSource = DataSource1
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 4
+        end
+        object Label1: TLabel
+          Left = 280
+          Height = 20
+          Top = 133
+          Width = 18
+          Caption = 'ID:'
+        end
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = zqUsuario
+  end
+  object zqUsuario: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    OnNewRecord = zqUsuarioNewRecord
+    SQL.Strings = (
+      'select * from usuarios'
+    )
+    Params = <>
+    Left = 488
+    Top = 48
+    object zqUsuarioid: TLongintField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqUsuariousuario: TStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object zqUsuarionome_completo: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object zqUsuariosenha: TStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object zqUsuariotipo_acesso: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_acesso'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+  end
+end

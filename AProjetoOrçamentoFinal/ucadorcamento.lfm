@@ -1,0 +1,371 @@
+inherited FcadOrcamento: TFcadOrcamento
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Cadastro De Orçamentos'
+  ClientHeight = 1001
+  ClientWidth = 1920
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1001
+    Width = 1920
+    OnChange = PageControl1Change
+    inherited TbsPesq: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PModTop: TPanel
+        Height = 106
+        Width = 1912
+        ClientHeight = 106
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited EdCodP: TEdit
+          OnChange = EdCodPChange
+        end
+        inherited BtPesqMod: TBitBtn
+          Left = 216
+          Height = 28
+          Top = 38
+          Width = 100
+          Align = alCustom
+          OnClick = BtPesqModClick
+        end
+      end
+      inherited PModBot: TPanel
+        Top = 866
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited BtnNovoMod: TBitBtn
+          Left = 8
+          OnClick = BtnNovoModClick
+        end
+        inherited BtnFechar: TBitBtn
+          Left = 1779
+          OnClick = BtnFecharClick
+        end
+        object btnEdit: TBitBtn[2]
+          Left = 120
+          Height = 38
+          Top = 25
+          Width = 94
+          Align = alCustom
+          Caption = 'Editar'
+          OnClick = btnEditClick
+          TabOrder = 2
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 760
+        Top = 106
+        Width = 1912
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID Orçamento'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID Cliente'
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Data Orçamento'
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Validade Orçamento'
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Valor Total'
+            FieldName = 'vl_total_orcamento'
+          end>
+        ReadOnly = True
+      end
+    end
+    inherited TBSCad: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PtbsCad: TPanel
+        Top = 856
+        Width = 1912
+        ClientWidth = 1912
+        inherited btnGravar: TBitBtn
+          OnClick = btnGravarClick
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 1779
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel1: TPanel[1]
+        Left = 0
+        Height = 120
+        Top = 0
+        Width = 1912
+        Align = alTop
+        ClientHeight = 120
+        ClientWidth = 1912
+        TabOrder = 1
+        object Label1: TLabel
+          Left = 56
+          Height = 20
+          Top = 14
+          Width = 18
+          Caption = 'ID:'
+        end
+        object Label2: TLabel
+          Left = 44
+          Height = 20
+          Top = 64
+          Width = 49
+          Caption = 'Cliente:'
+        end
+        object dbeID: TDBEdit
+          Left = 40
+          Height = 28
+          Top = 35
+          Width = 48
+          DataField = 'orcamentoid'
+          DataSource = dsOrcamento
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+          OnChange = dbeIDChange
+        end
+        object dbeCliente: TDBEdit
+          Left = 40
+          Height = 28
+          Top = 84
+          Width = 48
+          DataField = 'clienteid'
+          DataSource = dsCliente
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 1
+          OnChange = dbeClienteChange
+        end
+        object Label3: TLabel
+          Left = 114
+          Height = 20
+          Top = 14
+          Width = 93
+          Caption = 'Dt.Orçamento'
+        end
+        object dbeDTOrca: TDBEdit
+          Left = 112
+          Height = 28
+          Top = 35
+          Width = 80
+          DataField = 'dt_orcamento'
+          DataSource = DataSource1
+          MaxLength = 0
+          TabOrder = 2
+        end
+        object Label4: TLabel
+          Left = 224
+          Height = 20
+          Top = 14
+          Width = 77
+          Caption = 'Dt.Validade'
+        end
+        object dbeValidade: TDBEdit
+          Left = 216
+          Height = 28
+          Top = 35
+          Width = 80
+          DataField = 'dt_validade_orcamento'
+          DataSource = DataSource1
+          MaxLength = 0
+          TabOrder = 3
+          OnChange = dbeValidadeChange
+        end
+        object Label5: TLabel
+          Left = 672
+          Height = 23
+          Top = 20
+          Width = 133
+          Caption = 'Total Orçamento'
+          Font.Height = -17
+          Font.Style = [fsBold]
+          ParentFont = False
+        end
+        object dbeTOrcamento: TDBEdit
+          Left = 678
+          Height = 32
+          Top = 48
+          Width = 123
+          DataField = 'vl_total_orcamento'
+          DataSource = dsOrcamento
+          Alignment = taRightJustify
+          AutoSize = False
+          Font.Height = 25
+          Font.Style = [fsBold]
+          MaxLength = 0
+          ParentFont = False
+          TabOrder = 4
+          OnChange = dbeTOrcamentoChange
+        end
+        object Button1: TButton
+          Left = 104
+          Height = 26
+          Top = 84
+          Width = 35
+          Align = alCustom
+          Caption = '...'
+          Font.Name = 'btnCliente'
+          ParentFont = False
+          TabOrder = 5
+          OnClick = Button1Click
+        end
+        object btnRmvItem: TBitBtn
+          Left = 1096
+          Height = 29
+          Top = 84
+          Width = 104
+          Caption = 'Excluir Item'
+          OnClick = btnRmvItemClick
+          TabOrder = 6
+        end
+        object btnAddItem: TBitBtn
+          Left = 976
+          Height = 29
+          Top = 84
+          Width = 112
+          Caption = 'Adicionar Item'
+          OnClick = btnAddItemClick
+          TabOrder = 7
+        end
+      end
+      object DBGrid2: TDBGrid[2]
+        Left = 0
+        Height = 736
+        Top = 120
+        Width = 1912
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Title.Caption = 'Orçamento ID:'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Title.Caption = 'Item'
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Title.Caption = 'Produto ID'
+            FieldName = 'produtoid'
+          end        
+          item
+            Title.Caption = 'Descrição'
+            FieldName = 'produtodesc'
+          end        
+          item
+            Title.Caption = 'quant'
+            FieldName = 'qt_produto'
+          end        
+          item
+            MaxSize = 400
+            Title.Caption = 'Valor Unidade'
+            FieldName = 'vl_unitario'
+          end        
+          item
+            Title.Caption = 'Valor Total'
+            FieldName = 'vl_total'
+          end>
+        DataSource = dsOrcamentoItem
+        ReadOnly = True
+        TabOrder = 2
+        OnExit = DBGrid2Exit
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = zqCadOrcamento
+    Left = 472
+    Top = 24
+  end
+  object zqCadOrcamento: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    OnNewRecord = zqCadOrcamentoNewRecord
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+    Params = <>
+    Left = 352
+    Top = 24
+    object zqCadOrcamentoorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCadOrcamentoclienteid: TLongintField
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCadOrcamentodt_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCadOrcamentodt_validade_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCadOrcamentovl_total_orcamento: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+  end
+  object dsOrcamentoItem: TDataSource[3]
+    DataSet = DataModule1.zqOrcamentoItem
+    Left = 448
+    Top = 88
+  end
+  object dsCliente: TDataSource[4]
+    DataSet = DataModule1.zqPesquisa
+    Left = 560
+    Top = 72
+  end
+  object dsOrcamento: TDataSource[5]
+    DataSet = zqCadOrcamento
+    Left = 632
+    Top = 40
+  end
+end

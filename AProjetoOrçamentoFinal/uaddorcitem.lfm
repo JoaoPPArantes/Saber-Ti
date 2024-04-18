@@ -1,0 +1,188 @@
+object FPesqProduto: TFPesqProduto
+  Left = 771
+  Height = 235
+  Top = 109
+  Width = 714
+  Caption = 'Adicionar Item'
+  ClientHeight = 235
+  ClientWidth = 714
+  Color = clGradientActiveCaption
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object Label1: TLabel
+    Left = 118
+    Height = 20
+    Top = 54
+    Width = 18
+    Caption = 'ID:'
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 20
+    Top = 96
+    Width = 87
+    Caption = 'ID Categoria:'
+  end
+  object Label3: TLabel
+    Left = 54
+    Height = 20
+    Top = 140
+    Width = 81
+    Caption = 'Quantidade:'
+  end
+  object dbID: TDBEdit
+    Left = 146
+    Height = 28
+    Top = 50
+    Width = 100
+    DataField = 'produtoid'
+    DataSource = dsPesqProd
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object dbCatId: TDBEdit
+    Left = 146
+    Height = 28
+    Top = 92
+    Width = 100
+    DataField = 'categoriaprodutoid'
+    DataSource = dsPesqProd
+    Alignment = taRightJustify
+    DoubleBuffered = False
+    MaxLength = 0
+    ParentDoubleBuffered = False
+    TabOrder = 1
+  end
+  object Label4: TLabel
+    Left = 258
+    Height = 20
+    Top = 99
+    Width = 87
+    Caption = 'Observações:'
+  end
+  object edtQntd: TEdit
+    Left = 146
+    Height = 28
+    Top = 138
+    Width = 100
+    Alignment = taRightJustify
+    TabOrder = 2
+    Text = '1'
+    OnChange = edtQntdChange
+    OnExit = edtQntdExit
+  end
+  object Label5: TLabel
+    Left = 278
+    Height = 20
+    Top = 54
+    Width = 68
+    Caption = 'Descrição:'
+  end
+  object Label6: TLabel
+    Left = 274
+    Height = 20
+    Top = 140
+    Width = 72
+    Caption = 'Valor Final:'
+  end
+  object Label7: TLabel
+    Left = 516
+    Height = 20
+    Top = 54
+    Width = 37
+    Caption = 'Valor:'
+  end
+  object Label8: TLabel
+    Left = 509
+    Height = 20
+    Top = 99
+    Width = 43
+    Caption = 'Status:'
+  end
+  object dbDesc: TDBEdit
+    Left = 352
+    Height = 28
+    Top = 50
+    Width = 140
+    DataField = 'ds_produto'
+    DataSource = dsPesqProd
+    MaxLength = 50
+    TabOrder = 3
+  end
+  object dbObs: TDBEdit
+    Left = 352
+    Height = 28
+    Top = 92
+    Width = 142
+    DataField = 'obs_produto'
+    DataSource = dsPesqProd
+    MaxLength = 300
+    TabOrder = 4
+  end
+  object dbStatus: TDBEdit
+    Left = 561
+    Height = 28
+    Top = 92
+    Width = 100
+    DataField = 'status_produto'
+    DataSource = dsPesqProd
+    MaxLength = 10
+    TabOrder = 5
+  end
+  object dbValor: TDBEdit
+    Left = 561
+    Height = 28
+    Top = 50
+    Width = 100
+    DataField = 'vl_venda_produto'
+    DataSource = dsPesqProd
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 6
+    OnChange = dbValorChange
+  end
+  object edtValorFinal: TEdit
+    Left = 352
+    Height = 28
+    Top = 138
+    Width = 100
+    TabOrder = 7
+    Text = '0'
+    OnChange = edtValorFinalChange
+  end
+  object btnProcurarP: TBitBtn
+    Left = 538
+    Height = 32
+    Top = 138
+    Width = 124
+    Caption = 'Procurar Produto'
+    OnClick = btnProcurarPClick
+    TabOrder = 8
+  end
+  object btnInserir: TButton
+    Left = 54
+    Height = 31
+    Top = 190
+    Width = 94
+    Caption = 'Inserir'
+    TabOrder = 9
+    OnClick = btnInserirClick
+  end
+  object btnCancelar: TButton
+    Left = 170
+    Height = 31
+    Top = 190
+    Width = 94
+    Caption = 'Cancelar'
+    TabOrder = 10
+    OnClick = btnCancelarClick
+  end
+  object dsPesqProd: TDataSource
+    DataSet = DataModule1.zqProcProduto
+    OnDataChange = dsPesqProdDataChange
+    Left = 470
+  end
+end

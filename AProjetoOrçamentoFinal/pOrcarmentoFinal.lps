@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="pOrcarmentoFinal.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="5"/>
+        <CursorPos X="43" Y="27"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Modelo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMod"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="64"/>
+        <CursorPos Y="72"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="udm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDM"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="69"/>
+        <CursorPos X="66" Y="79"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="umenup.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FMenuP"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UMenuP"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="110"/>
+        <CursorPos X="19" Y="113"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="CadProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadProd"/>
+        <EditorIndex Value="12"/>
+        <TopLine Value="170"/>
+        <CursorPos X="3" Y="188"/>
+        <UsageCount Value="75"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucategoriaprod.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCatProd"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCategoriaProd"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="6"/>
+        <UsageCount Value="71"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucateproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCategoriaProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCateProduto"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="113"/>
+        <CursorPos X="34" Y="122"/>
+        <UsageCount Value="71"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FCadCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadCliente"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="61"/>
+        <CursorPos X="25" Y="64"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCadUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadUsuario"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="79"/>
+        <CursorPos X="3" Y="86"/>
+        <UsageCount Value="66"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucatescolha.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="fCatEscolha"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCatEscolha"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="53"/>
+        <CursorPos X="3" Y="63"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ucadorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FcadOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uCadOrcamento"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="138"/>
+        <CursorPos X="3" Y="141"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="upesqcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FpesqCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPesqCliente"/>
+        <EditorIndex Value="19"/>
+        <TopLine Value="56"/>
+        <CursorPos X="81" Y="67"/>
+        <ComponentState Value="1"/>
+        <UsageCount Value="60"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uaddorcitem.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FPesqProduto"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uAddOrcItem"/>
+        <EditorIndex Value="17"/>
+        <TopLine Value="90"/>
+        <CursorPos X="5" Y="92"/>
+        <UsageCount Value="47"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="uprocurarproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FProcProd"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uProcurarProduto"/>
+        <EditorIndex Value="18"/>
+        <TopLine Value="56"/>
+        <CursorPos X="25" Y="58"/>
+        <UsageCount Value="47"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelatorioclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrelClientes"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelatorioClientes"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="44"/>
+        <CursorPos X="3" Y="59"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\Zeos\src\component\ZDataset.pas"/>
+        <TopLine Value="113"/>
+        <CursorPos Y="131"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrelProd"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelProduto"/>
+        <EditorIndex Value="16"/>
+        <TopLine Value="32"/>
+        <CursorPos X="25" Y="49"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelorcamento.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRelOrcamento"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelOrcamento"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="40"/>
+        <CursorPos X="34" Y="51"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="urelusuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FRelUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uRelUsuario"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="40"/>
+        <CursorPos X="24" Y="58"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="usobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Fsobre"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSobre"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="17"/>
+        <CursorPos X="77" Y="17"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Flogin"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLogin"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="40"/>
+        <CursorPos X="12" Y="57"/>
+        <UsageCount Value="22"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="121" Column="57" TopLine="111"/>
+      </Position>
+      <Position>
+        <Filename Value="umenup.pas"/>
+        <Caret Line="85" Column="25" TopLine="83"/>
+      </Position>
+      <Position>
+        <Filename Value="umenup.pas"/>
+        <Caret Line="102" Column="4" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="usobre.pas"/>
+        <Caret Line="35" Column="3" TopLine="17"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="51" Column="52" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="50" Column="52" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="49" Column="52" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="50" Column="52" TopLine="38"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="51" Column="52" TopLine="39"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="55" Column="23" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="123" Column="4" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="121" Column="29" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="122" Column="15" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="121" TopLine="110"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="36" Column="15" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="123" Column="2" TopLine="118"/>
+      </Position>
+      <Position>
+        <Filename Value="umod.pas"/>
+        <Caret Line="70" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="umenup.pas"/>
+        <Caret Line="112" Column="3" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="ucadprod.pas"/>
+        <Caret Line="188" Column="25" TopLine="170"/>
+      </Position>
+      <Position>
+        <Filename Value="ucatescolha.pas"/>
+        <Caret Line="63" Column="25" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="urelatorioclientes.pas"/>
+        <Caret Line="64" Column="3" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="urelatorioclientes.pas"/>
+        <Caret Line="59" Column="3" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="121" Column="56" TopLine="114"/>
+      </Position>
+      <Position>
+        <Filename Value="ucateproduto.pas"/>
+        <Caret Line="122" Column="34" TopLine="113"/>
+      </Position>
+      <Position>
+        <Filename Value="urelorcamento.pas"/>
+        <Caret Line="51" Column="34" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="ulogin.pas"/>
+        <Caret Line="57" Column="12" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="pOrcarmentoFinal.lpr"/>
+        <Caret Line="27" Column="43" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="umenup.pas"/>
+        <Caret Line="9" Column="135" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="umenup.pas"/>
+        <Caret Line="112" Column="7" TopLine="110"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

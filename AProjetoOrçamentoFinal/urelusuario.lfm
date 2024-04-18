@@ -1,0 +1,105 @@
+object FRelUsuario: TFRelUsuario
+  Left = 428
+  Height = 354
+  Top = 266
+  Width = 451
+  Caption = 'Relatório Usuário'
+  ClientHeight = 354
+  ClientWidth = 451
+  Color = clGradientActiveCaption
+  DesignTimePPI = 120
+  OnClose = FormClose
+  LCLVersion = '3.2.0.0'
+  object btnRel: TButton
+    Left = 40
+    Height = 111
+    Top = 104
+    Width = 376
+    Caption = 'Imprimir Relatório'
+    Font.Height = -33
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnRelClick
+  end
+  object btnFecharRel: TButton
+    Left = 304
+    Height = 31
+    Top = 296
+    Width = 94
+    Caption = 'Fechar'
+    TabOrder = 1
+    OnClick = btnFecharRelClick
+  end
+  object frReportUsuario: TfrReport
+    Dataset = frDbDsUsuario
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 112
+    Top = 48
+  end
+  object frDbDsUsuario: TfrDBDataSet
+    DataSet = zqRelUsuario
+    Left = 216
+    Top = 48
+  end
+  object zqRelUsuario: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from usuarios  '
+    )
+    Params = <>
+    Left = 304
+    Top = 48
+    object zqRelUsuarioid: TLongintField
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqRelUsuariousuario: TStringField
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object zqRelUsuarionome_completo: TStringField
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object zqRelUsuariosenha: TStringField
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object zqRelUsuariotipo_acesso: TStringField
+      FieldKind = fkData
+      FieldName = 'tipo_acesso'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 60
+    end
+  end
+end

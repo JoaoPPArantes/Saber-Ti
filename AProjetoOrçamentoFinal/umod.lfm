@@ -1,0 +1,144 @@
+object Modelo: TModelo
+  Left = 269
+  Height = 608
+  Top = 150
+  Width = 852
+  Caption = 'Modelo'
+  ClientHeight = 608
+  ClientWidth = 852
+  DesignTimePPI = 120
+  OnClose = FormClose
+  LCLVersion = '3.2.0.0'
+  object PageControl1: TPageControl
+    Left = 0
+    Height = 608
+    Top = 0
+    Width = 852
+    ActivePage = TbsPesq
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object TbsPesq: TTabSheet
+      Caption = 'Pesquisa'
+      ClientHeight = 575
+      ClientWidth = 844
+      object PModTop: TPanel
+        Left = 0
+        Height = 92
+        Top = 0
+        Width = 844
+        Align = alTop
+        ClientHeight = 92
+        ClientWidth = 844
+        TabOrder = 0
+        object CodigoMod: TLabel
+          Left = 40
+          Height = 20
+          Top = 40
+          Width = 52
+          Caption = 'Código:'
+        end
+        object EdCodP: TEdit
+          Left = 100
+          Height = 28
+          Top = 38
+          Width = 100
+          TabOrder = 0
+        end
+        object BtPesqMod: TBitBtn
+          Left = 230
+          Height = 38
+          Top = 30
+          Width = 70
+          Caption = 'Buscar'
+          TabOrder = 1
+        end
+      end
+      object PModBot: TPanel
+        Left = 0
+        Height = 102
+        Top = 473
+        Width = 844
+        Align = alBottom
+        ClientHeight = 102
+        ClientWidth = 844
+        TabOrder = 1
+        object BtnNovoMod: TBitBtn
+          Left = 10
+          Height = 38
+          Top = 25
+          Width = 94
+          Anchors = [akLeft]
+          Caption = 'Novo'
+          TabOrder = 0
+        end
+        object BtnFechar: TBitBtn
+          Left = 711
+          Height = 38
+          Top = 25
+          Width = 94
+          Anchors = [akRight]
+          Caption = 'Fechar'
+          TabOrder = 1
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 381
+        Top = 92
+        Width = 844
+        Align = alClient
+        Color = clWindow
+        Columns = <>
+        DataSource = DataSource1
+        TabOrder = 2
+      end
+    end
+    object TBSCad: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 575
+      ClientWidth = 844
+      object PtbsCad: TPanel
+        Left = 0
+        Height = 112
+        Top = 463
+        Width = 844
+        Align = alBottom
+        ClientHeight = 112
+        ClientWidth = 844
+        TabOrder = 0
+        object btnGravar: TBitBtn
+          Left = 50
+          Height = 38
+          Top = 44
+          Width = 94
+          Anchors = [akLeft]
+          Caption = 'Gravar'
+          TabOrder = 0
+        end
+        object btnExcluir: TBitBtn
+          Left = 180
+          Height = 38
+          Top = 44
+          Width = 94
+          Anchors = [akLeft]
+          Caption = 'Excluir'
+          TabOrder = 1
+        end
+        object btnCancelar: TBitBtn
+          Left = 711
+          Height = 38
+          Top = 44
+          Width = 94
+          Anchors = [akRight]
+          Caption = 'Cancelar'
+          TabOrder = 2
+        end
+      end
+    end
+  end
+  object DataSource1: TDataSource
+    Left = 740
+    Top = 60
+  end
+end

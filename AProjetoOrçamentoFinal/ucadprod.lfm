@@ -1,0 +1,398 @@
+inherited CadProduto: TCadProduto
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Cadastro De Produto'
+  ClientHeight = 1001
+  ClientWidth = 1920
+  Color = clNone
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1001
+    Width = 1920
+    ActivePage = TbsPesq
+    TabIndex = 0
+    inherited TbsPesq: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PModTop: TPanel
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited CodigoMod: TLabel
+          Height = 20
+          Width = 52
+        end
+        inherited EdCodP: TEdit
+          Height = 28
+          OnChange = EdCodPChange
+        end
+        inherited BtPesqMod: TBitBtn
+          Left = 216
+          Height = 28
+          Top = 37
+          Width = 24
+          Align = alCustom
+          Caption = ''
+          Glyph.Data = {
+            DE020000424DDE02000000000000B60000002800000016000000170000000100
+            08000000000028020000C30E0000C30E0000200000000000000000FF0000FFFF
+            FF0080808000C0C0C00000000000FF000000FFFF00000000FF0000FFFF0045CA
+            BF004B737F00D0B4B400CC625700FF31310000CEFF000079FF000029FF005E5E
+            FF00BDBDFF00502B2D0000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000010101010101
+            0101010101010101010101010101010100000103030303030303030303030303
+            0303030404040301000001030303030303030303030303030303040701070401
+            0000010303030303030303030303030303040701010704010000010303030303
+            0303030303030303040701010707040100000103030303030303030303030304
+            0701010707040301000001030303030303030303030304070101070704030301
+            0000010303030303030303030304070101070704030303010000010303030303
+            0303030304070101070704030303030100000103030303030303030404040307
+            0704030303030301000001030303030304040404040404070403030303030301
+            0000010303030404060106010104040403030303030303010000010303040106
+            0106010101010403030303030303030100000103030406010601060106010403
+            0303030303030301000001030406010601010106010601040303030303030301
+            0000010304010601060106010601010403030303030303010000010304060106
+            0106010601060104030303030303030100000103040106010601060106010104
+            0303030303030301000001030304010601010106010604030303030303030301
+            0000010303040601060106010601040303030303030303010000010303030404
+            0101010604040303030303030303030100000103030303030404040403030303
+            0303030303030301000001010101010101010101010101010101010101010101
+            0000
+          }
+          OnClick = BtPesqModClick
+        end
+      end
+      inherited PModBot: TPanel
+        Top = 866
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited BtnNovoMod: TBitBtn
+          OnClick = BtnNovoModClick
+        end
+        inherited BtnFechar: TBitBtn
+          Left = 1779
+          OnClick = BtnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 774
+        Top = 92
+        Width = 1912
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Id'
+            FieldName = 'produtoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Status'
+            FieldName = 'status_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Descrição'
+            FieldName = 'ds_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Data'
+            FieldName = 'dt_cadastro_produto'
+          end>
+        ReadOnly = True
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited TBSCad: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PtbsCad: TPanel
+        Top = 856
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited btnGravar: TBitBtn
+          OnClick = BitBtn1Click
+        end
+        inherited btnExcluir: TBitBtn
+          OnClick = BitBtn2Click
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 1779
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel1: TPanel[1]
+        Left = 0
+        Height = 856
+        Top = 0
+        Width = 1912
+        Align = alClient
+        ClientHeight = 856
+        ClientWidth = 1912
+        ParentBackground = False
+        TabOrder = 1
+        object Panel2: TPanel
+          Left = 8
+          Height = 178
+          Top = 112
+          Width = 624
+          ClientHeight = 178
+          ClientWidth = 624
+          ParentBackground = False
+          TabOrder = 0
+          OnClick = Panel2Click
+          OnResize = Panel2Resize
+          object LId: TLabel
+            Left = 76
+            Height = 23
+            Top = 7
+            Width = 14
+            AutoSize = False
+            Caption = 'ID:'
+            OnClick = LIdClick
+          end
+          object IDEdt: TDBEdit
+            Left = 113
+            Height = 23
+            Top = 3
+            Width = 34
+            DataField = 'produtoid'
+            DataSource = DataSource1
+            Alignment = taRightJustify
+            AutoSize = False
+            MaxLength = 0
+            TabOrder = 0
+          end
+          object CategoriaEdt: TDBEdit
+            Left = 113
+            Height = 23
+            Top = 39
+            Width = 34
+            DataField = 'categoriaprodutoid'
+            DataSource = DataSource1
+            Alignment = taRightJustify
+            AutoSize = False
+            MaxLength = 0
+            TabOrder = 1
+          end
+          object DescricaoEdt: TDBEdit
+            AnchorSideBottom.Side = asrBottom
+            Left = 112
+            Height = 26
+            Top = 85
+            Width = 470
+            DataField = 'ds_produto'
+            DataSource = DataSource1
+            AutoSize = False
+            MaxLength = 50
+            TabOrder = 2
+          end
+          object ObservacaoEdt: TDBEdit
+            Left = 112
+            Height = 23
+            Top = 130
+            Width = 470
+            DataField = 'obs_produto'
+            DataSource = DataSource1
+            AutoSize = False
+            MaxLength = 300
+            TabOrder = 3
+          end
+          object VlrVendaEdt: TDBEdit
+            Left = 499
+            Height = 23
+            Top = 39
+            Width = 83
+            DataField = 'vl_venda_produto'
+            DataSource = DataSource1
+            Alignment = taRightJustify
+            AutoSize = False
+            MaxLength = 0
+            TabOrder = 4
+          end
+          object DtCadEdt: TDBEdit
+            Left = 499
+            Height = 23
+            Top = 1
+            Width = 83
+            DataField = 'dt_cadastro_produto'
+            DataSource = DataSource1
+            AutoSize = False
+            MaxLength = 0
+            TabOrder = 5
+            OnChange = DtCadEdtChange
+          end
+          object Label2: TLabel
+            Left = 25
+            Height = 21
+            Top = 41
+            Width = 71
+            AutoSize = False
+            Caption = 'Categoria:'
+          end
+          object Label4: TLabel
+            Left = 15
+            Height = 23
+            Top = 130
+            Width = 81
+            AutoSize = False
+            Caption = 'Observação:'
+          end
+          object Label5: TLabel
+            Left = 357
+            Height = 17
+            Top = 5
+            Width = 147
+            AutoSize = False
+            Caption = 'Dt.Cadastro Produto:'
+          end
+          object Label6: TLabel
+            Left = 430
+            Height = 21
+            Top = 40
+            Width = 80
+            AutoSize = False
+            Caption = 'Vlr.Venda:'
+          end
+          object DBComboBox1: TDBComboBox
+            Left = 255
+            Height = 28
+            Top = 39
+            Width = 100
+            AutoSize = False
+            DataField = 'status_produto'
+            DataSource = DataSource1
+            ItemHeight = 20
+            Items.Strings = (
+              'ATIVO'
+              'INATIVO'
+            )
+            MaxLength = 0
+            TabOrder = 6
+          end
+          object Label1: TLabel
+            Left = 206
+            Height = 20
+            Top = 41
+            Width = 51
+            AutoSize = False
+            Caption = 'Status:'
+          end
+          object cat: TButton
+            Left = 151
+            Height = 25
+            Top = 38
+            Width = 32
+            Caption = '...'
+            TabOrder = 7
+            OnClick = catClick
+          end
+          object Label3: TLabel
+            Left = 24
+            Height = 23
+            Top = 88
+            Width = 72
+            AutoSize = False
+            Caption = 'Descrição:'
+          end
+        end
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = qrCadProd
+    OnDataChange = DataSource1DataChange
+    Left = 480
+    Top = 76
+  end
+  object qrCadProd: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    OnNewRecord = qrCadProdNewRecord
+    SQL.Strings = (
+      'select* from produto'
+    )
+    Params = <>
+    Left = 408
+    Top = 72
+    object qrCadProdprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrCadProdcategoriaprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrCadProdds_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'ds_produto'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qrCadProdobs_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'obs_produto'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object qrCadProdvl_venda_produto: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_venda_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+    object qrCadProddt_cadastro_produto: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_cadastro_produto'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qrCadProdstatus_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'status_produto'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+  end
+end

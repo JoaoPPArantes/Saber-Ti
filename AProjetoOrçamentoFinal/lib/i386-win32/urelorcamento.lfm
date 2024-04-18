@@ -1,0 +1,93 @@
+object FRelOrcamento: TFRelOrcamento
+  Left = 877
+  Height = 354
+  Top = 270
+  Width = 449
+  Caption = 'Relatório Orçamento'
+  ClientHeight = 354
+  ClientWidth = 449
+  Color = clGradientActiveCaption
+  DesignTimePPI = 120
+  OnClose = FormClose
+  LCLVersion = '3.2.0.0'
+  object btnFecharRel: TButton
+    Left = 304
+    Height = 31
+    Top = 296
+    Width = 94
+    Caption = 'Fechar'
+    TabOrder = 0
+    OnClick = btnFecharRelClick
+  end
+  object btnRel: TButton
+    Left = 40
+    Height = 111
+    Top = 104
+    Width = 376
+    Caption = 'Imprimir Relatório'
+    Font.Height = -33
+    ParentFont = False
+    TabOrder = 1
+    OnClick = btnRelClick
+  end
+  object frDbDsOrcamento: TfrDBDataSet
+    DataSet = zqRelOrcamento
+    Left = 208
+    Top = 32
+  end
+  object frReportOrcamento: TfrReport
+    Dataset = frDbDsOrcamento
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 104
+    Top = 32
+  end
+  object zqRelOrcamento: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+    Params = <>
+    Left = 296
+    Top = 32
+    object zqRelOrcamentoorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqRelOrcamentodt_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqRelOrcamentodt_validade_orcamento: TDateTimeField
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqRelOrcamentovl_total_orcamento: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+  end
+end

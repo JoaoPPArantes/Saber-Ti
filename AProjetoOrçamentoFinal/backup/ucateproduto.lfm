@@ -1,0 +1,239 @@
+inherited FCategoriaProduto: TFCategoriaProduto
+  Left = -9
+  Height = 1001
+  Top = -9
+  Width = 1920
+  Caption = 'Cadastro Categoria De Produto'
+  ClientHeight = 1001
+  ClientWidth = 1920
+  Color = clWhite
+  OnClick = FormClick
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 1001
+    Width = 1920
+    ActivePage = TBSCad
+    TabIndex = 1
+    inherited TbsPesq: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      inherited PModTop: TPanel
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited EdCodP: TEdit
+          OnChange = EdCodPChange
+        end
+        inherited BtPesqMod: TBitBtn
+          Left = 215
+          Height = 31
+          Top = 37
+          Width = 28
+          Align = alCustom
+          Caption = ''
+          Glyph.Data = {
+            DE020000424DDE02000000000000B60000002800000016000000170000000100
+            08000000000028020000C30E0000C30E0000200000000000000000FF0000FFFF
+            FF0080808000C0C0C00000000000FF000000FFFF00000000FF0000FFFF0045CA
+            BF004B737F00D0B4B400CC625700FF31310000CEFF000079FF000029FF005E5E
+            FF00BDBDFF00502B2D0000000000000000000000000000000000000000000000
+            0000000000000000000000000000000000000000000000000000010101010101
+            0101010101010101010101010101010100000103030303030303030303030303
+            0303030404040301000001030303030303030303030303030303040701070401
+            0000010303030303030303030303030303040701010704010000010303030303
+            0303030303030303040701010707040100000103030303030303030303030304
+            0701010707040301000001030303030303030303030304070101070704030301
+            0000010303030303030303030304070101070704030303010000010303030303
+            0303030304070101070704030303030100000103030303030303030404040307
+            0704030303030301000001030303030304040404040404070403030303030301
+            0000010303030404060106010104040403030303030303010000010303040106
+            0106010101010403030303030303030100000103030406010601060106010403
+            0303030303030301000001030406010601010106010601040303030303030301
+            0000010304010601060106010601010403030303030303010000010304060106
+            0106010601060104030303030303030100000103040106010601060106010104
+            0303030303030301000001030304010601010106010604030303030303030301
+            0000010303040601060106010601040303030303030303010000010303030404
+            0101010604040303030303030303030100000103030303030404040403030303
+            0303030303030301000001010101010101010101010101010101010101010101
+            0000
+          }
+          OnClick = BtPesqModClick
+        end
+      end
+      inherited PModBot: TPanel
+        Top = 866
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientActiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited BtnNovoMod: TBitBtn
+          Left = 40
+          Top = 24
+          OnClick = BtnNovoModClick
+        end
+        inherited BtnFechar: TBitBtn
+          Left = 1806
+          Top = 16
+          OnClick = BtnFecharClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 774
+        Width = 1912
+        Color = clCream
+        ColRowDragIndicatorColor = clWhite
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            ReadOnly = True
+            Title.Caption = 'ID'
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Descrição'
+            FieldName = 'ds_categoria_produto'
+          end>
+        ReadOnly = True
+        OnDblClick = DBGrid1DblClick
+      end
+    end
+    inherited TBSCad: TTabSheet
+      ClientHeight = 968
+      ClientWidth = 1912
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      inherited PtbsCad: TPanel
+        Top = 856
+        Width = 1912
+        ClientWidth = 1912
+        Color = clGradientInactiveCaption
+        ParentBackground = False
+        ParentColor = False
+        inherited btnGravar: TBitBtn
+          Top = 32
+          OnClick = btnGravarClick
+        end
+        inherited btnExcluir: TBitBtn
+          Top = 32
+          OnClick = btnExcluirClick
+        end
+        inherited btnCancelar: TBitBtn
+          Left = 1806
+          Top = 32
+          OnClick = btnCancelarClick
+        end
+      end
+      object Panel1: TPanel[1]
+        Left = 8
+        Height = 271
+        Top = 0
+        Width = 432
+        ClientHeight = 271
+        ClientWidth = 432
+        ParentBackground = False
+        TabOrder = 1
+        OnClick = Panel1Click
+        OnResize = Panel1Resize
+        object Label1: TLabel
+          Left = 208
+          Height = 20
+          Top = 64
+          Width = 18
+          Caption = 'ID:'
+        end
+        object EditId: TDBEdit
+          Left = 197
+          Height = 28
+          Top = 88
+          Width = 39
+          DataField = 'categoriaprodutoid'
+          DataSource = DataSource1
+          Alignment = taRightJustify
+          MaxLength = 0
+          ParentFont = False
+          TabOrder = 0
+        end
+        object Label2: TLabel
+          Left = 184
+          Height = 20
+          Top = 120
+          Width = 65
+          Caption = 'Descrição'
+        end
+        object EditDesc: TDBEdit
+          Left = 176
+          Height = 28
+          Top = 144
+          Width = 80
+          DataField = 'ds_categoria_produto'
+          DataSource = DataSource1
+          CharCase = ecUppercase
+          MaxLength = 50
+          TabOrder = 1
+          OnChange = EditDescChange
+        end
+        object DBNavigator1: TDBNavigator
+          Left = 93
+          Height = 25
+          Top = 180
+          Width = 241
+          BevelOuter = bvNone
+          ChildSizing.EnlargeHorizontal = crsScaleChilds
+          ChildSizing.EnlargeVertical = crsScaleChilds
+          ChildSizing.ShrinkHorizontal = crsScaleChilds
+          ChildSizing.ShrinkVertical = crsScaleChilds
+          ChildSizing.Layout = cclLeftToRightThenTopToBottom
+          ChildSizing.ControlsPerLine = 100
+          ClientHeight = 25
+          ClientWidth = 241
+          DataSource = DataSource1
+          Options = []
+          ParentShowHint = False
+          TabOrder = 2
+          VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+        end
+      end
+    end
+  end
+  inherited DataSource1: TDataSource
+    DataSet = zqCat
+    OnDataChange = DataSource1DataChange
+  end
+  object zqCat: TZQuery[2]
+    Connection = DataModule1.ZConnection1
+    OnNewRecord = zqCatNewRecord
+    SQL.Strings = (
+      'select * from categoria_produto'
+    )
+    Params = <>
+    Left = 496
+    Top = 40
+    object zqCatcategoriaprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object zqCatds_categoria_produto: TStringField
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+end

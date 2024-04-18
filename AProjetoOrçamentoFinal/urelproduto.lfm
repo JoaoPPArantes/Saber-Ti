@@ -1,0 +1,57 @@
+object FrelProd: TFrelProd
+  Left = 390
+  Height = 349
+  Top = 150
+  Width = 446
+  Caption = 'Relatório De Produtos'
+  ClientHeight = 349
+  ClientWidth = 446
+  Color = clGradientActiveCaption
+  DesignTimePPI = 120
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '3.2.0.0'
+  object btnRel: TButton
+    Left = 32
+    Height = 111
+    Top = 104
+    Width = 376
+    Caption = 'Imprimir Relatório'
+    Font.Height = -33
+    ParentFont = False
+    TabOrder = 0
+    OnClick = btnRelClick
+  end
+  object btnFecharRel: TButton
+    Left = 304
+    Height = 31
+    Top = 296
+    Width = 94
+    Caption = 'Fechar'
+    TabOrder = 1
+    OnClick = btnFecharRelClick
+  end
+  object zqRelProd: TZQuery
+    Connection = DataModule1.ZConnection1
+    SQL.Strings = (
+      'select * from produto '
+    )
+    Params = <>
+    Left = 304
+    Top = 24
+  end
+  object frProduto: TfrReport
+    Dataset = FrDbRelProd
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    DataType = dtDataSet
+    Left = 80
+    Top = 24
+  end
+  object FrDbRelProd: TfrDBDataSet
+    DataSet = zqRelProd
+    Left = 192
+    Top = 32
+  end
+end
